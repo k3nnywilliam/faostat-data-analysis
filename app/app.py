@@ -16,16 +16,19 @@ if __name__ == "__main__":
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     st.title('FAOSTAT data analysis on enteric fermentation')
     st.text('Created by Kenny William Nyallau')
+    
     curr_dir = os.getcwd()
-    image = Image.open(curr_dir+'/app/data/bovine.jpg')
+    img_path = (curr_dir, '/app/data/bovine.jpg')
+    image = Image.open("".join(img_path))
     st.image(image)
     
-    dp = DataProcessor()
-    dv = DataView()
+    dataprocessor = DataProcessor()
+    dataviewer = DataView()
 
-    dp.load_dataset(curr_dir+'/app/data/FAOSTAT_enteric_emm_9-7-2021.csv')
-    dp.process_data()
-    df = dp.get_processed_data()
+    data_path = (curr_dir, '/app/data/FAOSTAT_enteric_emm_9-7-2021.csv')
+    dataprocessor.load_dataset("".join(data_path))
+    dataprocessor.process_data()
+    data = dataprocessor.get_processed_data()
 
-    dv.display_dataframe(df, st)
-    dv.display_chart(df, x='Area', y='Value', st=st)
+    dataviewer.display_dataframe(data, st)
+    dataviewer.display_chart(data, x='Area', y='Value', st=st)
