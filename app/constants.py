@@ -1,0 +1,15 @@
+
+AREA_DROP = ['World', 'Africa', 'Eastern Africa',
+            'Middle Africa', 'Northern Africa', 'Southern Africa',
+            'Western Africa', 'Americas', 'Northern America',
+            'Central America', 'Caribbean', 'South America', 'Asia',
+            'Central Asia', 'Eastern Asia', 'Southern Asia',
+            'South-eastern Asia', 'Western Asia', 'Europe', 'Eastern Europe',
+            'Southern Europe', 'Western Europe', 'Oceania',
+            'Australia and New Zealand', 'Melanesia', 'Micronesia',
+            'European Union (28)', 'European Union (27)',
+            'Least Developed Countries', 'Land Locked Developing Countries',
+            'Small Island Developing States',
+            'Low Income Food Deficit Countries',
+            'Net Food Importing Developing Countries', 'Annex I countries',
+            'Non-Annex I countries', 'OECD']
