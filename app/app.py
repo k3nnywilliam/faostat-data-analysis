@@ -16,15 +16,16 @@ if __name__ == "__main__":
     
     dp = DataProcessor()
 
-    #curDir = os.getcwd()
+    curDir = os.getcwd()
+    print(curDir)
 
-    dp.load_dataset('data/FAOSTAT_enteric_emm_9-7-2021.csv')
+    dp.load_dataset(curDir+'/app/data/FAOSTAT_enteric_emm_9-7-2021.csv')
     dp.process_data()
     df = dp.get_processed_data()
     
     st.title('FAOSTAT data analysis on enteric fermentation')
     st.text('Created by Kenny William Nyallau')
-    image = Image.open('data/bovine.jpg')
+    image = Image.open(curDir+'/app/data/bovine.jpg')
     st.image(image)
     st.write(df)
     
